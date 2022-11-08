@@ -17,6 +17,7 @@ export default {
 
     methods: {
         loadLightboxData() {
+            // pass the individual hero object back to the main VM instance 
             this.$emit('loadlb', this.hero);
         }
     }

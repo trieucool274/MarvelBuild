@@ -20,8 +20,6 @@
     </header>
 
     <main id="app">
-
-        <lightbox></lightbox>
         <nav id="character-nav">
             <ul class="characters">
                 <!-- prof thumb component goes here -->
@@ -34,15 +32,17 @@
             <h3>Choose Your Hero!</h3>
             <p>Use your mouse to hover / click to discover more about each Marvel character</p>
         </article>
+
+        <!-- lightbox component goes here -->
+    <lightbox @closelb="this.showLightBox = false" v-if="showLightBox" :hero="lightboxData"></lightbox>
+    <!-- end lightbox component -->
     </main>
     <!-- make this a sticky footer so it's always at the bottom-->
     <footer class="sticky_footer">
         <h3>All Images &copy; Marvel</h3>
     </footer>
 
-    <!-- lightbox component goes here -->
-
-    <!-- end lightbox component -->
+    
     
     <!-- load script tags at the bottom -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
