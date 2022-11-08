@@ -18,14 +18,15 @@ import Lightbox from './components/TheLightboxComponents.js';
         data() {
             return {
                 heroData: {},
-                lightboxData: {}
+                lightboxData: {},
+                showLightBox: false
             }
         },
 
         methods: {
-            loadLightBox(item) {
-                //debugger;
-                this.lightboxData = item; 
+            loadLightBox(item) { 
+                this.lightboxData = item;
+                this.showLightBox = true; 
             }
         },
 
