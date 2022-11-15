@@ -5,11 +5,8 @@ export default {
 
     template:
     `
-    <section class="lightbox">
-
-        <pre>{{ hero }}</pre>
-
-        <img @click="closeLB" src="images/closeIcon.png" class="lightbox_close">
+    <section ref="lbWrapper" class="lightbox" :style="{ 'background-image': 'url(../images/' + hero.lbBG + ')' }">        
+        <img ref="closeBut" @click="closeLB" src="images/closeIcon.png" class="lightbox_close">
         <!-- hero image on the left, text on the right -->
         <!-- her image is a background image -->
         <article>
